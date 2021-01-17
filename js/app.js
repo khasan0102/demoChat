@@ -5,14 +5,17 @@ let btn1 = document.querySelector('#btn1');
 let imgBtn = document.querySelector('#imgBtn');
 let place = document.querySelector('#place');
 let main = document.querySelector('.chat-main');
-let date = new Date();
-let minut = date.getMinutes();
-let hours = date.getHours();
 
 function newElemet(element) {
     return document.createElement(element);
 }
-
+function getTime() {
+    let date = new Date();
+    let minut = date.getMinutes();
+    let hours = date.getHours();
+    let time = hours + ":" + minut;
+    return time;
+}
 function addMessage() {
     let div = newElemet('div');
     let time = newElemet('time');
@@ -24,7 +27,7 @@ function addMessage() {
     div.appendChild(time);
     div.appendChild(p);
     p.textContent = input.value
-    time.innerText = hours + ":" + minut; 
+    time.innerText = getTime(); 
     p.style.maxWidth = "220px"
     input.value = "";
 
@@ -35,7 +38,7 @@ function addImage(url) {
     let div = newElemet('div');
     let img = newElemet('img');
     let time = newElemet("time");
-    time.innerText = hours + ":" + minut; 
+    time.innerText = getTime(); 
     img.setAttribute("src", url.value);
     img.setAttribute("alt", "Img message");
     div.classList.add('message');
