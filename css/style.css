@@ -1,0 +1,257 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to bottom, #C9DAE7, #84A8C7);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.chat-box{
+    margin-top: 60px;
+    height: 515px;
+    width: 420px;
+    background-color: white;
+}
+
+.chat-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #658AD8;
+    width: 100%;
+    padding: 20px 22px;
+}
+
+.chat-heading{
+    margin: 0;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.chat-heading::before{
+    content: '';
+    height: 8px;
+    width: 8px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.close{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.close-element{
+    display: block;
+    height: 3px;
+    width: 20px;
+    background-color: white;
+    position: absolute;
+    
+}
+
+.close-element:first-child{
+    transform: rotate(-45deg);
+}
+
+.close-element:nth-child(2){
+    transform: rotate(45deg);
+}
+
+.close:hover{
+    opacity: 1;
+}
+
+.chat-main{
+ height: 360px;
+ width: 100%;
+ background-color: white;
+ overflow-y: auto;
+ overflow-x: hidden;
+ display: flex;
+ flex-direction: column;
+ padding: 0 7px;
+}
+
+.main-heading{
+    text-align: center;
+    margin-top: 16px;
+}
+
+.main-heading > span{
+    text-transform: uppercase;
+    font-size: 15px;
+    color: #E6E2E0;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 12px;
+}
+
+.main-heading > span::before, .main-heading > span::after{
+    content: '';
+    width: 45%;
+    height: 2px;
+    background-color: #E6E2E0;
+    margin: 0 5px;
+}
+
+.message{
+    display: inline-flex;
+    flex-direction: column;
+    padding:  5px;
+    border-radius: 3px;
+    max-width: 220px;
+    width: auto;
+    margin: 10px 0;
+    margin-left: auto;
+}
+
+.message > time{
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: bold;
+    color: #c2bbb8;
+    margin-bottom: 3px;
+}
+.message-text{
+    background-color: #FFB9C0;
+    font-size: 14px;
+    margin: 0;
+    line-height: 16px;
+    max-width: 220px;
+    font-weight: 400;
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+}
+
+.message-left{
+    margin-right: auto;
+    margin-left: 0;
+}
+.message-left > time{
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.message-left > .message-text{
+    background-color: #E6E2E0;
+}
+
+.chat-form{
+    width: 92%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border-top: 1px solid #E6E2E0;
+    padding-top: 10px;
+    position: relative;
+}
+
+#writeText{
+    position: relative;
+    border: none;
+    outline: none;
+    width: 80%;
+    font-size: 16px;
+    padding: 5px;
+    line-height: 20px;
+    z-index: 10;
+    padding-left: 30px;
+    /* height: 50px; */
+}
+
+#btn{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #658AD8;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+}
+
+#imgBtn{
+    background: none;
+    border: none;
+    outline: none;
+    position: absolute;
+    z-index: 15;
+    cursor: pointer;
+}
+
+.writeUrl{
+    position: absolute;
+    border: none;
+    outline: none;
+    width: 80%;
+    font-size: 16px;
+    padding: 5px;
+    line-height: 20px;
+    z-index: 0;
+    padding-left: 10px;
+}
+
+.urlActive{
+    z-index: 20;
+}
+
+.message > img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.btn1{
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2a2d33;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+
+.btn1Act {
+    z-index: 15;
+}
