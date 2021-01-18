@@ -190,7 +190,7 @@ body{
     padding: 5px;
     line-height: 20px;
     z-index: 10;
-    padding-left: 30px;
+    padding-left: 35px;
     /* height: 50px; */
 }
 
@@ -225,7 +225,7 @@ body{
     padding: 5px;
     line-height: 20px;
     z-index: 0;
-    padding-left: 10px;
+    padding-left: 35px;
 }
 
 .urlActive{
@@ -245,7 +245,7 @@ body{
     cursor: pointer;
     font-size: 18px;
     font-weight: bold;
-    color: #2a2d33;
+    color: #658AD8;
     text-transform: uppercase;
     position: absolute;
     right: 0;
@@ -254,4 +254,21 @@ body{
 
 .btn1Act {
     z-index: 15;
+}
+
+.closeBtn{
+    display: block;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    background: none;
+    border: none;
+    outline: none;
+    background-image: url('../design/cancel.svg');
+    background-size: 18px 18px;
+    background-position: center;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    padding: 0;
+    z-index: 25;
 }
