@@ -45,7 +45,7 @@ function addMessage() {
 }
 function addImage(url) {
     url = inputUrl;
-    if(url.value == "");
+    if(url.value == "") return false;
     let div = newElement('div');
     let img = newElement('img');
     let time = newElement("time");
@@ -61,6 +61,7 @@ function addImage(url) {
     url.classList.remove('urlActive');
     url.value = "";
     main.scrollTop = main.scrollHeight;
+    chatForm.removeChild(btnClose);
 }
 
 btn.addEventListener('click', addMessage)
@@ -85,6 +86,7 @@ btnClose.addEventListener('click',  function() {
     btn1.classList.remove('btnAct');
     chatForm.removeChild(btnClose);
 })
+
 inputUrl.addEventListener('keyup', function(event) {
     if(event.keyCode == 13) {
         addImage(inputUrl);
